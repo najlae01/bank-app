@@ -58,149 +58,46 @@ Contributions are welcome! If you want to contribute to this Bank Management App
 
 You can also open an issue in the GitHub repository.
 
----
-  
 ## Database Design
 
- <img align="left" width="1000px" src="readme-images/databaseDesign.png" />
- 
-<br/>
-<br/>
-  
----
-  
-  ## App Interface
+![Database Design](readme-images/databaseDesign.png)
 
-Those screenshots show the web app functionalities that include adding an account, deleting an  account, updating the account holder's name, as well as making transactions such as deposit and withdrawal and deleting them if needed.
+## App Interface
 
-  <img align="left" width="1000px" src="readme-images/1.png" />  
-  
-<br/><br/>
-  
-  <img align="left" width="1000px" src="readme-images/2.png" />  
-  
-<br/><br/>
-  
-  <img align="left" width="1000px" src="readme-images/3.png" />  
-  
-<br/><br/>
-  
-  <img align="left" width="1000px" src="readme-images/4.png" />  
-   
-<br/><br/>
-   
-  <img align="left" width="1000px" src="readme-images/5.png" />  
-   
-<br/><br/>
-   
-  <img align="left" width="1000px" src="readme-images/6.png" />  
-   
-<br/><br/>
-   
-  <img align="left" width="1000px" src="readme-images/7.png" />  
-   
-<br/><br/>
-   
-  <img align="left" width="1000px" src="readme-images/8.png" />  
-   
-<br/><br/>
-   
-  <img align="left" width="1000px" src="readme-images/9.png" />  
-   
-<br/><br/>
-   
-  <img align="left" width="1000px" src="readme-images/10.png" />  
-   
-<br/><br/>
-   
-  <img align="left" width="1000px" src="readme-images/11.png" />  
-   
-<br/><br/>
-   
-  <img align="left" width="1000px" src="readme-images/12.png" />  
-   
-<br/><br/>
-   
-  <img align="left" width="1000px" src="readme-images/13.png" />  
-   
-<br/><br/>
-   
-  <img align="left" width="1000px" src="readme-images/14.png" />  
-   
-<br/><br/>
-   
-  <img align="left" width="1000px" src="readme-images/15.png" />  
-   
-<br/><br/>
-   
-  <img align="left" width="1000px" src="readme-images/16.png" />  
-   
-<br/><br/>
-   
-  <img align="left" width="1000px" src="readme-images/18.png" />  
-   
-<br/><br/>
-   
-  <img align="left" width="1000px" src="readme-images/19.png" />  
-   
-<br/><br/>
-   
-  <img align="left" width="1000px" src="readme-images/20.png" />  
-   
-<br/><br/>
-   
-  <img align="left" width="1000px" src="readme-images/21.png" />  
-   
-<br/><br/>
-   
-  <img align="left" width="1000px" src="readme-images/22.png" />  
-   
-<br/><br/>
-   
-  <img align="left" width="1000px" src="readme-images/23.png" />  
-   
-<br/><br/>
-   
-  <img align="left" width="1000px" src="readme-images/24.png" />  
-   
-<br/><br/>
-   
-  <img align="left" width="1000px" src="readme-images/25.png" />  
-   
-<br/><br/>
-   
-  <img align="left" width="1000px" src="readme-images/26.png" />  
-   
-<br/><br/>
-   
-  <img align="left" width="1000px" src="readme-images/27.png" />  
-   
-<br/><br/>
-   
-  <img align="left" width="1000px" src="readme-images/28.png" />  
-   
-<br/><br/>
-   
-  <img align="left" width="1000px" src="readme-images/29.png" />  
-   
-<br/><br/>
-   
-  <img align="left" width="1000px" src="readme-images/30.png" />  
-   
-<br/><br/>
-   
-  <img align="left" width="1000px" src="readme-images/31.png" />  
-   
-<br/><br/>
-   
-  <img align="left" width="1000px" src="readme-images/32.png" />  
-   
-<br/><br/>
-   
-  <img align="left" width="1000px" src="readme-images/33.png" />  
-   
-<br/><br/>
-   
-  <img align="left" width="1000px" src="readme-images/34.png" />
+The following screenshots showcase the web application's user interface and its functionalities, including adding an account, deleting an account, updating the account holder's name, as well as making transactions such as deposits and withdrawals, and deleting them if needed.
 
- ---
+![Screenshot 1](readme-images/1.png)
+![Screenshot 2](readme-images/2.png)
+![Screenshot 3](readme-images/3.png)
+![Screenshot 4](readme-images/4.png)
+![Screenshot 5](readme-images/5.png)
+![Screenshot 6](readme-images/6.png)
+![Screenshot 7](readme-images/7.png)
+![Screenshot 8](readme-images/8
+
+.png)
+![Screenshot 9](readme-images/9.png)
+![Screenshot 10](readme-images/10.png)
+![Screenshot 11](readme-images/11.png)
+![Screenshot 12](readme-images/12.png)
+![Screenshot 13](readme-images/13.png)
+![Screenshot 14](readme-images/14.png)
+![Screenshot 15](readme-images/15.png)
+![Screenshot 16](readme-images/16.png)
+![Screenshot 17](readme-images/18.png)
+![Screenshot 18](readme-images/19.png)
+![Screenshot 19](readme-images/20.png)
+![Screenshot 20](readme-images/21.png)
+![Screenshot 21](readme-images/22.png)
+![Screenshot 22](readme-images/23.png)
+![Screenshot 23](readme-images/24.png)
+![Screenshot 24](readme-images/25.png)
+![Screenshot 25](readme-images/26.png)
+![Screenshot 26](readme-images/27.png)
+![Screenshot 27](readme-images/28.png)
+![Screenshot 28](readme-images/29.png)
+![Screenshot 29](readme-images/30.png)
+![Screenshot 30](readme-images/31.png)
+![Screenshot 31](readme-images/32.png)
+![Screenshot 32](readme-images/33.png)
+![Screenshot 33](readme-images/34.png)
