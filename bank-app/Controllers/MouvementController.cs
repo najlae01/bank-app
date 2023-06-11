@@ -32,7 +32,7 @@ namespace bank_app.Controllers
             ViewBag.id = id;
 
 
-            if (compteDetails == null) return View("Empty");
+            if (compteDetails == null) return View("NotFound");
             var mouvement = new Mouvement
             {
                 compte_id = id
@@ -55,7 +55,7 @@ namespace bank_app.Controllers
             if (compte == null)
             {
                 // Handle the case when the associated compte is not found
-                return View("Empty");
+                return View("NotFound");
             }
 
             ViewBag.mouvement = mouvement;
@@ -83,11 +83,11 @@ namespace bank_app.Controllers
 
             ViewBag.id = id;
 
-            if (mouvementDetails == null) return View("Not Found");
+            if (mouvementDetails == null) return View("NotFound");
 
             var compteDetails = await _comptesService.GetById(mouvementDetails.compte_id);
 
-            if (compteDetails == null) return View("Not Found");
+            if (compteDetails == null) return View("NotFound");
 
             var viewModel = new Tuple<Mouvement, Compte>(mouvementDetails, compteDetails);
 
@@ -99,7 +99,7 @@ namespace bank_app.Controllers
         {
             var mouvementDetails = await _service.GetById(id);
 
-            if (mouvementDetails == null) return View("Not Found");
+            if (mouvementDetails == null) return View("NotFound");
 
             var compte_id = mouvementDetails.compte_id;
 

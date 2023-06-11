@@ -39,7 +39,7 @@
             <input type="hidden" asp-for="@Model.Item1.id" />
             <div class="form-group">
                 <input type="submit" value="Delete" class="btn btn-danger" />
-                <a class="btn btn-secondary" asp-action="Details" asp-route-id="@Model.Item2.id">Cancel</a>
+                <a class="btn btn-secondary" asp-controller="Compte" asp-action="Details" asp-route-id="@Model.Item2.id">Cancel</a>
             </div>
         </form>
     </div>

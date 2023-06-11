@@ -5,8 +5,8 @@
 }
 
 <div class="row">
-    <div class="col-md-8 offset-md-2">
-        <h1>Transactions made by @Model.Item2.nom</h1>
+    <div class="col-md-10 offset-md-1">
+        <h1 class="text-center mb-4">Transactions made by @Model.Item2.nom</h1>
         <table class="table">
             <thead>
                 <tr class="text-center">
@@ -23,7 +23,7 @@
                 {
                     <tr>
                         <td>@item.id</td>
-                        <td>@item.montant</td>
+                        <td>@item.montant DH</td>
                         <td>@Model.Item2.nom</td>
                         <td>@item.date_mnt.ToString("dd-MM-yyyy")</td>
                         <td>
@@ -45,6 +45,8 @@
                 }
             </tbody>
         </table>
-        <a class="btn btn-outline-secondary" asp-action="Index">Back to Accounts</a>
+        <div class="col-md-6 d-flex justify-content-end">
+            <a class="btn btn-secondary mt-4" asp-action="Index">Back to Accounts</a>
+        </div>
     </div>
 </div>

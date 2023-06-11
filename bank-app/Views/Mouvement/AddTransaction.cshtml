@@ -4,13 +4,11 @@
     ViewData["Title"] = "Make a new transaction";
 }
 
-<div class="row text">
-    <div class="col-md-8 offset-2">
-        <p>
-            <h1>Make a new transaction</h1>
-        </p>
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <h1 class="mb-4">Make a new transaction</h1>
         <div class="row">
-            <div class="col-md-8 offset-4">
+            <div class="col-md-8 offset-md-2">
                 <form asp-action="AddTransaction">
                     <input type="hidden" name="compte_id" value="@Model.compte_id" />
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -19,9 +17,9 @@
                         <input asp-for="montant" class="form-control" />
                         <span asp-validation-for="montant" class="text-danger"></span>
                     </div>
-                    <div class="form-group">
-                        <input type="submit" value="Create" class="btn btn-outline-success float-right" />
-                        <a class="btn btn-outline-secondary" asp-controller="Compte" asp-action="Index">Back To Accounts</a>
+                    <div class="form-group text-center mt-4">
+                        <input type="submit" value="Create" class="btn btn-outline-success" />
+                        <a class="btn btn-outline-secondary float-right" asp-controller="Compte" asp-action="Index">Back To Accounts</a>
                     </div>
                 </form>
             </div>
@@ -29,10 +27,8 @@
     </div>
 </div>
 
-
 <script>
     console.log(@Html.Raw(Json.Serialize(ViewBag.id)));
     console.log(@Html.Raw(Json.Serialize(ViewBag.compte_id)));
     console.log(@Html.Raw(Json.Serialize(ViewBag.mouvement)));
 </script>
-

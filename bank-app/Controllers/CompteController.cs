@@ -44,7 +44,7 @@ namespace bank_app.Controllers
         {
             var compteDetails = await _service.GetById(id);
 
-            if (compteDetails == null) return View("Not Found");
+            if (compteDetails == null) return View("NotFound");
 
             var mouvements = await _mouvementsService.GetAll();
             var mouvementsByAccount = mouvements.Where(m => m.compte_id == id);
@@ -61,7 +61,7 @@ namespace bank_app.Controllers
         {
             var compteDetails = await _service.GetById(id);
 
-            if (compteDetails == null) return View("Not Found");
+            if (compteDetails == null) return View("NotFound");
 
             var viewModel = new AccountDetailsViewModel
             {
@@ -76,7 +76,7 @@ namespace bank_app.Controllers
         {
              var compte = await _service.GetById(id);
 
-                if (compte == null) return View("Not Found");
+                if (compte == null) return View("NotFound");
 
                 compte.nom = viewModel.Compte.nom;
 
@@ -92,7 +92,7 @@ namespace bank_app.Controllers
         {
             var compteDetails = await _service.GetById(id);
 
-            if (compteDetails == null) return View("Not Found");
+            if (compteDetails == null) return View("NotFound");
 
             var mouvements = await _mouvementsService.GetAll();
             var mouvementsByAccount = mouvements.Where(m => m.compte_id == id);
@@ -108,7 +108,7 @@ namespace bank_app.Controllers
         {
             var compteDetails = await _service.GetById(id);
 
-            if (compteDetails == null) return View("Not Found");
+            if (compteDetails == null) return View("NotFound");
             
             await _service.Delete(id);
 

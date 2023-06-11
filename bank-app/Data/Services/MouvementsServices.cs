@@ -43,8 +43,9 @@ namespace bank_app.Data.Services
 
         public async Task<IEnumerable<Mouvement>> GetAll()
         {
-            var result = await _dbContext.Mouvements.ToListAsync();
-            return result;
+            // Fetching Mouvement objects from the database including the related Compte entity
+            var mouvements = await _dbContext.Mouvements.Include(m => m.compte).ToListAsync();
+            return mouvements;
         }
 
         public async Task<Mouvement> GetById(int id)
