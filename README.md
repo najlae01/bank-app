@@ -59,3 +59,6 @@ You can also open an issue in the GitHub repository.
 
 ---
 
+## Database Design
+
+ <img align="left" width="1000px" src="readme-images/databasedesign.png" />
