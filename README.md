@@ -8,7 +8,6 @@ The Bank Management Application is a web-based application built with ASP.NET Co
 - [Usage](#usage)
 - [Database Configuration](#database-configuration)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Installation
 
@@ -62,71 +61,109 @@ You can also open an issue in the GitHub repository.
 ## Database Design
 
  <img align="left" width="1000px" src="readme-images/databaseDesign.png" />
+ 
+---
 
 ## App Interface
 
- <img align="left" width="1000px" src="readme-images/1.png" />
- 
+Those screenshots show the web app functionamities that include adding an account, deleting an  account, updating the account holder's name, as well as making transactions such as deposit and withdrawal and deleting them if needed.
+
+  <img align="left" width="1000px" src="readme-images/1.png" />
+ <br/>
+ <br/>
  <img align="left" width="1000px" src="readme-images/2.png" />
-  
+ <br/>
+ <br/>
  <img align="left" width="1000px" src="readme-images/3.png" />
-   
+ <br/>
+ <br/>
  <img align="left" width="1000px" src="readme-images/4.png" />
- 
+ <br/>
+ <br/>
  <img align="left" width="1000px" src="readme-images/5.png" />
- 
+ <br/>
+ <br/>
  <img align="left" width="1000px" src="readme-images/6.png" />
- 
+ <br/>
+ <br/>
  <img align="left" width="1000px" src="readme-images/7.png" />
- 
+ <br/>
+ <br/>
  <img align="left" width="1000px" src="readme-images/8.png" />
- 
+ <br/>
+ <br/>
  <img align="left" width="1000px" src="readme-images/9.png" />
- 
+ <br/>
+ <br/>
  <img align="left" width="1000px" src="readme-images/10.png" />
- 
+ <br/>
+ <br/>
  <img align="left" width="1000px" src="readme-images/11.png" />
- 
+ <br/>
+ <br/>
  <img align="left" width="1000px" src="readme-images/12.png" />
- 
+ <br/>
+ <br/>
  <img align="left" width="1000px" src="readme-images/13.png" />
- 
+ <br/>
+ <br/>
  <img align="left" width="1000px" src="readme-images/14.png" />
- 
+ <br/>
+ <br/>
  <img align="left" width="1000px" src="readme-images/15.png" />
- 
+ <br/>
+ <br/>
  <img align="left" width="1000px" src="readme-images/16.png" />
- 
+ <br/>
+ <br/>
  <img align="left" width="1000px" src="readme-images/18.png" />
- 
+ <br/>
+ <br/>
  <img align="left" width="1000px" src="readme-images/19.png" />
- 
+ <br/>
+ <br/>
  <img align="left" width="1000px" src="readme-images/20.png" />
- 
+ <br/>
+ <br/>
  <img align="left" width="1000px" src="readme-images/21.png" />
- 
+ <br/>
+ <br/>
  <img align="left" width="1000px" src="readme-images/22.png" />
- 
+ <br/>
+ <br/>
  <img align="left" width="1000px" src="readme-images/23.png" />
- 
+ <br/>
+ <br/>
  <img align="left" width="1000px" src="readme-images/24.png" />
- 
+ <br/>
+ <br/>
  <img align="left" width="1000px" src="readme-images/25.png" />
- 
+ <br/>
+ <br/>
  <img align="left" width="1000px" src="readme-images/26.png" />
- 
+ <br/>
+ <br/>
  <img align="left" width="1000px" src="readme-images/27.png" />
- 
+ <br/>
+ <br/>
  <img align="left" width="1000px" src="readme-images/28.png" />
- 
+ <br/>
+ <br/>
  <img align="left" width="1000px" src="readme-images/29.png" />
- 
+ <br/>
+ <br/>
  <img align="left" width="1000px" src="readme-images/30.png" />
- 
+ <br/>
+ <br/>
  <img align="left" width="1000px" src="readme-images/31.png" />
- 
+ <br/>
+ <br/>
  <img align="left" width="1000px" src="readme-images/32.png" />
- 
+ <br/>
+ <br/>
  <img align="left" width="1000px" src="readme-images/33.png" />
- 
+ <br/>
+ <br/>
  <img align="left" width="1000px" src="readme-images/34.png" />
+ 
+ ---
