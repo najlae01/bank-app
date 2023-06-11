@@ -65,7 +65,7 @@ You can also open an issue in the GitHub repository.
 
 ## App Interface
 
- <img align="left" width="700px" src="readme-images/1.png" />
+ <img align="left" width="1000px" src="readme-images/1.png" />
  
  <img align="left" width="1000px" src="readme-images/2.png" />
   
