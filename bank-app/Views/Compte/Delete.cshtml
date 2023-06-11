@@ -1,14 +1,17 @@
 ﻿@model Tuple<IEnumerable<Mouvement>, Compte>
 
 @{
-    ViewData["Title"] = "Transactions made by the account";
+    ViewData["Title"] = "Delete the account";
 }
 
 <div class="row">
     <div class="col-md-8 offset-md-2">
-        <h1>Transactions made by @Model.Item2.nom</h1>
+        <h1 class="mb-4">Delete Confirmation for Account: @Model.Item2.nom</h1>
+        <div class="alert alert-danger">
+            Are you sure you want to delete this account?
+        </div>
         <table class="table">
-            <thead>
+            <thead class="thead-light">
                 <tr class="text-center">
                     <th>ID</th>
                     <th>Transaction Amount</th>
@@ -37,14 +40,24 @@
                             }
                         </td>
                         <td>
-                            <a class="btn btn-danger text-white" asp-controller="Mouvement" asp-action="Delete" asp-route-id="@item.id">
-                                <i class="bi bi-trash"></i>Delete
+                            <a class="btn btn-danger text-white" asp-action="Delete" asp-route-id="@item.id">
+                                <i class="bi bi-trash"></i> Delete
                             </a>
                         </td>
                     </tr>
                 }
             </tbody>
         </table>
-        <a class="btn btn-outline-secondary" asp-action="Index">Back to Accounts</a>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <form asp-action="Delete">
+                    <input type="hidden" asp-for="@Model.Item2.id" />
+                    <input type="submit" value="Confirm" class="btn btn-danger float-right" />
+                </form>
+            </div>
+            <div class="col-md-6">
+                <a class="btn btn-outline-secondary float-left" asp-action="Index">Back to Accounts</a>
+            </div>
+        </div>
     </div>
 </div>

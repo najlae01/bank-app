@@ -20,9 +20,24 @@ namespace bank_app.Data.Services
             _dbContext.SaveChanges();
         }
 
-        public void Delete(int id)
+        public async Task Delete(int id)
         {
+            var compte = await _dbContext.Comptes.Include(c => c.mouvements).FirstOrDefaultAsync(c => c.id == id);
 
+            if (compte == null)
+            {
+                // Handle the case when the account doesn't exist
+                return;
+            }
+
+            // Remove the associated transactions
+            _dbContext.Mouvements.RemoveRange(compte.mouvements);
+
+            // Remove the account
+            _dbContext.Comptes.Remove(compte);
+
+            // Save the changes to the database
+            _dbContext.SaveChanges();
         }
 
         public async Task<IEnumerable<Compte>> GetAll()
@@ -39,9 +54,19 @@ namespace bank_app.Data.Services
 
         public async Task<Compte> Update(int id, Compte newCompte)
         {
-            _dbContext.Comptes.Update(newCompte);
+            var existingCompte = await _dbContext.Comptes.FindAsync(id);
+            if (existingCompte == null)
+            {
+                // Handle the case when the compte does not exist
+                return null;
+            }
+
+            // Update the properties of the existingCompte with the newCompte
+            existingCompte.nom = newCompte.nom;
+            existingCompte.mouvements = newCompte.mouvements;
+
             _dbContext.SaveChanges();
-            return newCompte;
+            return existingCompte;
         }
 
         public void DisableForeignKeys()

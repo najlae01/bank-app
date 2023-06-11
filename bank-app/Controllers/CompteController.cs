@@ -86,5 +86,34 @@ namespace bank_app.Controllers
                 return RedirectToAction("Details", new { id = compte.id });
         }
 
+
+        // GET: Compte/Delete/1
+        public async Task<IActionResult> Delete(int id)
+        {
+            var compteDetails = await _service.GetById(id);
+
+            if (compteDetails == null) return View("Not Found");
+
+            var mouvements = await _mouvementsService.GetAll();
+            var mouvementsByAccount = mouvements.Where(m => m.compte_id == id);
+
+
+            var viewModel = new Tuple<IEnumerable<Mouvement>, Compte>(mouvementsByAccount, compteDetails);
+
+            return View(viewModel);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var compteDetails = await _service.GetById(id);
+
+            if (compteDetails == null) return View("Not Found");
+            
+            await _service.Delete(id);
+
+            return RedirectToAction("Index", "Compte");
+        }
+
     }
 }

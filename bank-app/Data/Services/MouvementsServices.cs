@@ -1,5 +1,6 @@
 ﻿using bank_app.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Numerics;
 
 namespace bank_app.Data.Services
 {
@@ -19,9 +20,25 @@ namespace bank_app.Data.Services
             _dbContext.SaveChanges();
         }
 
-        public void Delete(int id)
+        public async Task Delete(int id)
         {
-            throw new NotImplementedException();
+            var mouvement = await _dbContext.Mouvements.FirstOrDefaultAsync(n => n.id == id);
+            //to implement
+            if (mouvement == null)
+            {
+                return;
+            }
+
+            // Remove the mouvement from the associated account
+            var compte = await _dbContext.Comptes.FirstOrDefaultAsync(c => c.id == mouvement.compte_id);
+            if (compte != null)
+            {
+                compte.mouvements.Remove(mouvement);
+            }
+
+            _dbContext.Mouvements.Remove(mouvement);
+
+            _dbContext.SaveChanges();
         }
 
         public async Task<IEnumerable<Mouvement>> GetAll()
@@ -30,9 +47,10 @@ namespace bank_app.Data.Services
             return result;
         }
 
-        public Mouvement GetById(int id)
+        public async Task<Mouvement> GetById(int id)
         {
-            throw new NotImplementedException();
+            var result = await _dbContext.Mouvements.FirstOrDefaultAsync(n => n.id == id);
+            return result;
         }
 
         public async Task<Mouvement> Update(int id, Mouvement newMouvement)

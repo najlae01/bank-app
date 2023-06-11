@@ -6,12 +6,12 @@ namespace bank_app.Data.Services
     {
         Task<IEnumerable<Mouvement>> GetAll();
 
-        Mouvement GetById(int id);
+        Task<Mouvement> GetById(int id);
 
         Task Add(Mouvement mouvement);
 
         Task<Mouvement> Update (int id, Mouvement newMouvement);
 
-        void Delete(int id);
+        Task Delete(int id);
     }
 }

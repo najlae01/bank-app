@@ -12,6 +12,6 @@ namespace bank_app.Data.Services
 
         Task<Compte> Update(int id, Compte newCompte);
 
-        void Delete(int id);
+        Task Delete(int id);
     }
 }
