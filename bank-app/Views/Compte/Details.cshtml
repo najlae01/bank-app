@@ -1,0 +1,50 @@
+﻿@model Tuple<IEnumerable<Mouvement>, Compte>
+
+@{
+    ViewData["Title"] = "Transactions made by the account";
+}
+
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <h1>Transactions made by @Model.Item2.nom</h1>
+        <table class="table">
+            <thead>
+                <tr class="text-center">
+                    <th>ID</th>
+                    <th>Transaction Amount</th>
+                    <th>Account Holder Name</th>
+                    <th>Date</th>
+                    <th>Transaction Type</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Item1)
+                {
+                    <tr>
+                        <td>@item.id</td>
+                        <td>@item.montant</td>
+                        <td>@Model.Item2.nom</td>
+                        <td>@item.date_mnt.ToString("dd-MM-yyyy")</td>
+                        <td>
+                            @if (item.montant > 0)
+                            {
+                                <span>Deposit</span>
+                            }
+                            else
+                            {
+                                <span>Withdrawal</span>
+                            }
+                        </td>
+                        <td>
+                            <a class="btn btn-danger text-white" asp-action="Delete" asp-route-id="@item.id">
+                                <i class="bi bi-trash"></i>Delete
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <a class="btn btn-outline-secondary" asp-action="Index">Back to Accounts</a>
+    </div>
+</div>

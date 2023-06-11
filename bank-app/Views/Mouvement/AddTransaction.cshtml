@@ -1,0 +1,29 @@
+﻿@model Mouvement
+
+@{
+    ViewData["Title"] = "Make a new transaction";
+}
+
+<div class="row text">
+    <div class="col-md-8 offset-2">
+        <p>
+            <h1>Make a new transaction</h1>
+        </p>
+        <div class="row">
+            <div class="col-md-8 offset-4">
+                <form asp-action="AddTransaction">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="montant" class="control-label"></label>
+                        <input asp-for="montant" class="form-control" />
+                        <span asp-validation-for="montant" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-outline-success float-right" />
+                        <a class="btn btn-outline-secondary" asp-controller="Compte" asp-action="Index">Back To Accounts</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
