@@ -24,9 +24,9 @@ The Bank Management Application is a web-based application built with ASP.NET Co
 
 ## Database Configuration
 
-1. Install XAMPP: Download and install XAMPP from the official website.
+1. Install XAMPP: Download and install XAMPP from the [official website](https://www.apachefriends.org/index.html).
 2. Start the XAMPP Control Panel: Launch the XAMPP Control Panel to start the Apache and MySQL services.
-3. Access phpMyAdmin: Open your web browser and visit [http://localhost/phpmyadmin].
+3. Access phpMyAdmin: Open your web browser and visit `http://localhost/phpmyadmin`.
 4. Create a new database: Click on "Databases" tab in phpMyAdmin, enter a name for your database, and click "Create" to create a new database for the application.
 5. Update the connection string: Open the appsettings.json file in your project and modify the database connection string with the following details:
 
