@@ -8,6 +8,8 @@ The Bank Management Application is a web-based application built with ASP.NET Co
 - [Usage](#usage)
 - [Database Configuration](#database-configuration)
 - [Contributing](#contributing)
+- [Database Design](#database-design)
+- [App Interface](#app-interface)
 
 ## Installation
 
@@ -69,7 +71,7 @@ You can also open an issue in the GitHub repository.
   
   ## App Interface
 
-Those screenshots show the web app functionamities that include adding an account, deleting an  account, updating the account holder's name, as well as making transactions such as deposit and withdrawal and deleting them if needed.
+Those screenshots show the web app functionalities that include adding an account, deleting an  account, updating the account holder's name, as well as making transactions such as deposit and withdrawal and deleting them if needed.
 
   <img align="left" width="1000px" src="readme-images/1.png" />  
   
