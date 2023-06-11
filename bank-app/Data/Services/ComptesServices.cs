@@ -1,5 +1,6 @@
 ﻿using bank_app.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Numerics;
 
 namespace bank_app.Data.Services
 {
@@ -36,9 +37,11 @@ namespace bank_app.Data.Services
             return result;
         }
 
-        public Compte Update(int id, Compte newCompte)
+        public async Task<Compte> Update(int id, Compte newCompte)
         {
-            return null;
+            _dbContext.Comptes.Update(newCompte);
+            _dbContext.SaveChanges();
+            return newCompte;
         }
 
         public void DisableForeignKeys()

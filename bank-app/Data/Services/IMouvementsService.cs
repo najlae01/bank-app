@@ -10,7 +10,7 @@ namespace bank_app.Data.Services
 
         Task Add(Mouvement mouvement);
 
-        Mouvement Update(int id, Compte newMouvement);
+        Task<Mouvement> Update (int id, Mouvement newMouvement);
 
         void Delete(int id);
     }

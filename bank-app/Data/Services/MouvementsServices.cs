@@ -35,9 +35,11 @@ namespace bank_app.Data.Services
             throw new NotImplementedException();
         }
 
-        public Mouvement Update(int id, Compte newMouvement)
+        public async Task<Mouvement> Update(int id, Mouvement newMouvement)
         {
-            throw new NotImplementedException();
+            _dbContext.Mouvements.Update(newMouvement);
+            _dbContext.SaveChanges();
+            return newMouvement;
         }
 
         public void DisableForeignKeys()

@@ -1,0 +1,24 @@
+﻿@model AccountDetailsViewModel
+
+@{
+    ViewData["Title"] = "Edit Account";
+}
+
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <h1>Edit Account: @Model.Compte.nom</h1>
+
+        <form asp-action="Edit" method="post">
+            <input type="hidden" name="id" value="@Model.Compte.id" />
+
+            <div class="form-group">
+                <label asp-for="Compte.nom" class="control-label"></label>
+                <input asp-for="Compte.nom" class="form-control" />
+                <span asp-validation-for="Compte.nom" class="text-danger"></span>
+            </div>
+
+            <input type="submit" value="Save" class="btn btn-primary" />
+            <a asp-action="Details" asp-route-id="@Model.Compte.id" class="btn btn-secondary">Cancel</a>
+        </form>
+    </div>
+</div>

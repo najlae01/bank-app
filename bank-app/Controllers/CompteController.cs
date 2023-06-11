@@ -44,7 +44,7 @@ namespace bank_app.Controllers
         {
             var compteDetails = await _service.GetById(id);
 
-            if (compteDetails == null) return View("Empty");
+            if (compteDetails == null) return View("Not Found");
 
             var mouvements = await _mouvementsService.GetAll();
             var mouvementsByAccount = mouvements.Where(m => m.compte_id == id);
@@ -54,5 +54,37 @@ namespace bank_app.Controllers
 
             return View(viewModel);
         }
+
+
+        // GET: Compte/Edit/1
+        public async Task<IActionResult> Edit(int id)
+        {
+            var compteDetails = await _service.GetById(id);
+
+            if (compteDetails == null) return View("Not Found");
+
+            var viewModel = new AccountDetailsViewModel
+            {
+                Compte = compteDetails
+            };
+
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(int id, [Bind("Compte")] AccountDetailsViewModel viewModel)
+        {
+             var compte = await _service.GetById(id);
+
+                if (compte == null) return View("Not Found");
+
+                compte.nom = viewModel.Compte.nom;
+
+                // Save the updated account details
+                await _service.Update(id, compte);
+
+                return RedirectToAction("Details", new { id = compte.id });
+        }
+
     }
 }
